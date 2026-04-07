@@ -1,0 +1,7 @@
+[package]
+name = "remote_test_bench"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+scpi = "1.0.1"
