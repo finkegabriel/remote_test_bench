@@ -1,0 +1,12 @@
+syntax = "proto3";
+package instrument;
+
+service Controller {
+  rpc SetVoltage (VoltageRequest) returns (ActionResponse);
+  rpc StreamTelemetry (Empty) returns (stream TelemetryData);
+}
+
+message VoltageRequest { float volts = 1; }
+message ActionResponse { bool success = 1; string message = 2; }
+message TelemetryData { float current_draw = 1; float temperature = 2; }
+message Empty {}
