@@ -1,0 +1,13 @@
+name: "DIY-Supply-01"
+model: "Arduino-Hybrid-V1"
+category: "PowerSupply"
+capabilities:
+  voltage:
+    min: 0.0
+    max: 24.0 # Your power supply's limit
+    step: 0.1
+  current:
+    max: 2.0
+driver_settings:
+  i2c_address: 0x42
+  pwm_frequency: 1000
